@@ -852,6 +852,8 @@ section { padding: 96px 80px; }
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
+.blog-card a { text-decoration: none; color: inherit; display: block; }
+.blog-card a .blog-img { margin-bottom: 20px; }
 .blog-card { cursor: pointer; }
 .blog-img {
   width: 100%;
