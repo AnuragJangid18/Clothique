@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logo192.png" type="image/x-icon">
+  <title>Clothique — Custom T-Shirts Delivered Across India</title>
+  <meta name="description"
+    content="Clothique offers premium custom-printed t-shirts with pan-India delivery. Design your own tee, explore bestselling styles, and get 20% off your first purchase.">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Announcement -->
+  <div class="announce-bar">
+    🇮🇳 Free Shipping on orders above ₹999 <span>|</span> Custom Designs Delivered Across India <span>|</span> Use code
+    <strong>FIRST20</strong> for 20% off
+  </div>
+
+  <!-- Navigation -->
+  <nav id="mainNav">
+    <a href="#" class="nav-logo">Clot<em>hique</em></a>
+    <div class="nav-search">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.35-4.35" />
+      </svg>
+      <input type="text" placeholder="Search t-shirts, styles…">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#" class="sale">Sale</a></li>
+      <li><a href="#categories">Shop</a></li>
+      <li><a href="#customizer">Customize</a></li>
+      <li><a href="#" class="cta-pill">Get Custom Quote</a></li>
+    </ul>
+    <div class="nav-icons">
+      <button class="nav-icon-btn" title="Account">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+      </button>
+      <button class="nav-icon-btn" title="Wishlist">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+      </button>
+      <button class="nav-icon-btn" onclick="openCart()" title="Cart">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 0 1-8 0" />
+        </svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+      <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#">Home</a>
+    <a href="#categories">Shop</a>
+    <a href="#" style="color:#C4583A">Sale</a>
+    <a href="#customizer">Customize</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" style="padding:0">
+    <div class="hero-left">
+      <p class="hero-eyebrow fade-up fade-up-1">New Collection 2025</p>
+      <h1 class="hero-title fade-up fade-up-2">
+        Design Your<br>
+        <strong>Perfect <em>T-Shirt</em></strong>
+        Delivered Everywhere
+      </h1>
+      <p class="hero-sub fade-up fade-up-3">Premium custom-printed tees, crafted for expression. From your idea to your
+        doorstep — across every pin code in India.</p>
+      <div class="hero-actions fade-up fade-up-4">
+        <a href="#customizer" class="btn-primary">
+          Start Designing
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#categories" class="btn-secondary">Browse Collection</a>
+      </div>
+      <div class="hero-stats fade-up fade-up-5">
+        <div class="stat-item">
+          <div class="stat-num">50K+</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">28K+</div>
+          <div class="stat-label">Pincodes Served</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">4.9★</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=900&q=80" alt="Fashion Collection"
+        class="hero-img fade-up fade-up-1">
+      <div class="hero-img-overlay"></div>
+      <div class="hero-tag">
+        <div class="hero-tag-label">Limited Drop</div>
+        <div class="hero-tag-text">Urban Essentials</div>
+        <div class="hero-tag-sub">From ₹599</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Strip -->
+  <div class="features-strip">
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
+      </div>
+      <div class="feature-text">
+        <h4>Premium Quality</h4>
+        <p>180 GSM cotton, soft-finish printing</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <rect x="1" y="3" width="15" height="13" />
+          <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+          <circle cx="5.5" cy="18.5" r="2.5" />
+          <circle cx="18.5" cy="18.5" r="2.5" />
+        </svg>
+      </div>
+      <div class="feature-text">
+        <h4>Pan-India Delivery</h4>
+        <p>28,000+ pincodes, 5–7 day delivery</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        </svg>
+      </div>
+      <div class="feature-text">
+        <h4>Custom Design Tool</h4>
+        <p>Text, logos, artwork — all yours</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+      </div>
+      <div class="feature-text">
+        <h4>Bulk Orders Welcome</h4>
+        <p>Corporates, events, colleges — we deliver</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <section id="categories">
+    <div class="section-header reveal">
+      <div>
+        <p class="section-eyebrow">Browse by</p>
+        <h2 class="section-title">Shop by <strong>Category</strong></h2>
+      </div>
+      <a href="#" class="view-all-link">View All →</a>
+    </div>
+    <div class="categories-grid reveal">
+      <div class="cat-card">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&q=80" alt="Men's T-Shirts">
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <h3>Men's</h3>
+          <p>42 Styles</p>
+          <span class="cat-badge">Explore →</span>
+        </div>
+      </div>
+      <div class="cat-card">
+        <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=500&q=80" alt="Women's T-Shirts">
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <h3>Women's</h3>
+          <p>38 Styles</p>
+          <span class="cat-badge">Explore →</span>
+        </div>
+      </div>
+      <div class="cat-card">
+        <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=500&q=80" alt="Kids T-Shirts">
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <h3>Kids</h3>
+          <p>24 Styles</p>
+          <span class="cat-badge">Explore →</span>
+        </div>
+      </div>
+      <div class="cat-card">
+        <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=500&q=80" alt="Custom T-Shirts">
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <h3>Custom</h3>
+          <p>Design Yours</p>
+          <span class="cat-badge">Create →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Selling Products -->
+  <section class="section-alt">
+    <div class="section-header reveal">
+      <div>
+        <p class="section-eyebrow">Most Loved</p>
+        <h2 class="section-title">Best <strong>Selling</strong></h2>
+      </div>
+      <a href="#" class="view-all-link">View All →</a>
+    </div>
+    <div class="products-grid" id="productsGrid">
+
+      <div class="product-card reveal" onclick="addToCart('Oversized Graphic Tee', 1299)">
+        <div class="product-img-wrap">
+          <span class="product-badge">18% off</span>
+          <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&q=80"
+            alt="Oversized Graphic Tee">
+          <div class="product-actions">
+            <button class="product-action-btn main"
+              onclick="event.stopPropagation(); addToCart('Oversized Graphic Tee', 1299)">Add to Cart</button>
+            <button class="product-action-btn" onclick="event.stopPropagation()">Quick View</button>
+          </div>
+          <button class="product-wishlist" onclick="event.stopPropagation(); wishlist(this)">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </button>
+        </div>
+        <p class="product-name">Oversized Graphic Tee</p>
+        <div class="product-price">
+          <span class="price-current">₹1,299</span>
+          <span class="price-old">₹1,599</span>
+          <span class="price-off">18% off</span>
+        </div>
+        <div class="product-colors">
+          <div class="color-dot active" style="background:#1A1A1A"></div>
+          <div class="color-dot" style="background:#8A9E8A"></div>
+          <div class="color-dot" style="background:#C4583A"></div>
+          <div class="color-dot" style="background:#F5F3EE; border:1.5px solid #ddd"></div>
+        </div>
+      </div>
+
+      <div class="product-card reveal" onclick="addToCart('Minimalist Drop Shoulder', 999)">
+        <div class="product-img-wrap">
+          <span class="product-badge new">New</span>
+          <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&q=80"
+            alt="Minimalist Drop Shoulder">
+          <div class="product-actions">
+            <button class="product-action-btn main"
+              onclick="event.stopPropagation(); addToCart('Minimalist Drop Shoulder', 999)">Add to Cart</button>
+            <button class="product-action-btn" onclick="event.stopPropagation()">Quick View</button>
+          </div>
+          <button class="product-wishlist" onclick="event.stopPropagation(); wishlist(this)">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </button>
+        </div>
+        <p class="product-name">Minimalist Drop Shoulder</p>
+        <div class="product-price">
+          <span class="price-current">₹999</span>
+          <span class="price-old">₹1,299</span>
+          <span class="price-off">23% off</span>
+        </div>
+        <div class="product-colors">
+          <div class="color-dot active" style="background:#fff; border:1.5px solid #ddd"></div>
+          <div class="color-dot" style="background:#1A1A1A"></div>
+          <div class="color-dot" style="background:#C8D5C4"></div>
+        </div>
+      </div>
+
+      <div class="product-card reveal" onclick="addToCart('Custom Print Tee', 1499)">
+        <div class="product-img-wrap">
+          <span class="product-badge custom">Custom</span>
+          <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&q=80" alt="Custom Print Tee">
+          <div class="product-actions">
+            <button class="product-action-btn main"
+              onclick="event.stopPropagation(); addToCart('Custom Print Tee', 1499)">Add to Cart</button>
+            <button class="product-action-btn" onclick="event.stopPropagation()">Quick View</button>
+          </div>
+          <button class="product-wishlist" onclick="event.stopPropagation(); wishlist(this)">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </button>
+        </div>
+        <p class="product-name">Custom Print Tee</p>
+        <div class="product-price">
+          <span class="price-current">₹1,499</span>
+          <span class="price-old">₹1,999</span>
+          <span class="price-off">25% off</span>
+        </div>
+        <div class="product-colors">
+          <div class="color-dot active" style="background:#8A9E8A"></div>
+          <div class="color-dot" style="background:#1A1A1A"></div>
+          <div class="color-dot" style="background:#C4583A"></div>
+        </div>
+      </div>
+
+      <div class="product-card reveal" onclick="addToCart('Vintage Washed Tee', 1199)">
+        <div class="product-img-wrap">
+          <span class="product-badge">15% off</span>
+          <img src="https://images.unsplash.com/photo-1622445275576-721325763afe?w=400&q=80" alt="Vintage Washed Tee">
+          <div class="product-actions">
+            <button class="product-action-btn main"
+              onclick="event.stopPropagation(); addToCart('Vintage Washed Tee', 1199)">Add to Cart</button>
+            <button class="product-action-btn" onclick="event.stopPropagation()">Quick View</button>
+          </div>
+          <button class="product-wishlist" onclick="event.stopPropagation(); wishlist(this)">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </button>
+        </div>
+        <p class="product-name">Vintage Washed Tee</p>
+        <div class="product-price">
+          <span class="price-current">₹1,199</span>
+          <span class="price-old">₹1,399</span>
+          <span class="price-off">15% off</span>
+        </div>
+        <div class="product-colors">
+          <div class="color-dot active" style="background:#D2B48C"></div>
+          <div class="color-dot" style="background:#708090"></div>
+          <div class="color-dot" style="background:#1A1A1A"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive T-Shirt Customizer -->
+  <section class="customizer-section" id="customizer">
+    <div class="customizer-grid">
+      <div class="customizer-left reveal">
+        <p class="section-eyebrow">Design Studio</p>
+        <h2 class="section-title" style="color:#fff">Create Your<br><strong>Custom T-Shirt</strong></h2>
+        <p class="customizer-desc">Express yourself with our live design tool. Pick colors, add your text, choose your
+          size — and we'll deliver it fresh to your door, anywhere in India.</p>
+        <div class="customizer-steps">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-info">
+              <h4>Pick a Color</h4>
+              <p>Choose from 12 premium fabric shades</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-info">
+              <h4>Add Your Text</h4>
+              <p>Name, quote, logo — make it personal</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-info">
+              <h4>Select Size & Order</h4>
+              <p>Delivered within 5–7 days across India</p>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn-primary" style="align-self:flex-start">
+          Full Design Studio →
+        </a>
+      </div>
+
+      <div class="tshirt-customizer reveal">
+        <div class="tshirt-preview">
+          <svg class="tshirt-svg" viewBox="0 0 220 260" fill="none" xmlns="http://www.w3.org/2000/svg" id="tshirtSVG">
+            <path id="tshirtBody"
+              d="M55 60 L20 90 L40 105 L40 220 L180 220 L180 105 L200 90 L165 60 C155 80 140 90 110 90 C80 90 65 80 55 60 Z"
+              fill="#1A1A1A" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+            <path d="M55 60 L35 20 L75 30 C80 50 90 65 110 70 C130 65 140 50 145 30 L185 20 L165 60" fill="#1A1A1A"
+              id="tshirtSleeves" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+            <ellipse cx="110" cy="28" rx="22" ry="10" fill="#1A1A1A" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"
+              id="tshirtCollar" />
+          </svg>
+          <div class="tshirt-text-layer" id="tshirtTextLayer" style="color:#fff">YOUR TEXT</div>
+        </div>
+
+        <div class="customizer-controls">
+          <div class="ctrl-group">
+            <label>T-Shirt Color</label>
+            <div class="color-swatches" id="colorSwatches">
+              <div class="swatch active" style="background:#1A1A1A" data-color="#1A1A1A" data-text="#fff"
+                onclick="setColor(this)"></div>
+              <div class="swatch" style="background:#fff; border:2px solid rgba(255,255,255,0.2)" data-color="#ffffff"
+                data-text="#111" onclick="setColor(this)"></div>
+              <div class="swatch" style="background:#8A9E8A" data-color="#8A9E8A" data-text="#fff"
+                onclick="setColor(this)"></div>
+              <div class="swatch" style="background:#C4583A" data-color="#C4583A" data-text="#fff"
+                onclick="setColor(this)"></div>
+              <div class="swatch" style="background:#4A6FA5" data-color="#4A6FA5" data-text="#fff"
+                onclick="setColor(this)"></div>
+              <div class="swatch" style="background:#E8C068" data-color="#E8C068" data-text="#111"
+                onclick="setColor(this)"></div>
+              <div class="swatch" style="background:#708090" data-color="#708090" data-text="#fff"
+                onclick="setColor(this)"></div>
+              <div class="swatch" style="background:#D2B48C" data-color="#D2B48C" data-text="#111"
+                onclick="setColor(this)"></div>
+            </div>
+          </div>
+
+          <div class="ctrl-group">
+            <label>Print Text</label>
+            <input type="text" class="text-input" id="tshirtTextInput" placeholder="Type your text…" maxlength="20"
+              oninput="updateText(this.value)">
+          </div>
+
+          <div class="ctrl-group">
+            <label>Select Size</label>
+            <div class="size-btns" id="sizeBtns">
+              <button class="size-btn" onclick="setSize(this)">XS</button>
+              <button class="size-btn" onclick="setSize(this)">S</button>
+              <button class="size-btn active" onclick="setSize(this)">M</button>
+              <button class="size-btn" onclick="setSize(this)">L</button>
+              <button class="size-btn" onclick="setSize(this)">XL</button>
+              <button class="size-btn" onclick="setSize(this)">XXL</button>
+            </div>
+          </div>
+
+          <div class="ctrl-group">
+            <label>Quantity & Order</label>
+            <div class="ctrl-row">
+              <button class="qty-btn" onclick="changeQty(-1)">−</button>
+              <span class="qty-val" id="qtyVal">1</span>
+              <button class="qty-btn" onclick="changeQty(1)">+</button>
+              <button class="add-to-cart-btn" onclick="addCustomToCart()">Add to Cart — ₹<span
+                  id="customPrice">1499</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discount Banner -->
+  <div class="discount-banner reveal">
+    <div>
+      <p class="discount-eyebrow">Limited Time Offer</p>
+      <div class="discount-title">Get 20% Discount<strong>On Your First Purchase.</strong></div>
+      <p class="discount-sub">Subscribe and unlock exclusive deals, new arrivals, and style tips delivered to your
+        inbox.</p>
+      <div class="discount-form">
+        <input type="email" class="discount-input" placeholder="Enter your email address">
+        <button class="discount-btn">Subscribe</button>
+      </div>
+    </div>
+    <div class="discount-img-wrap">
+      <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&q=80" alt="T-Shirt Stack Discount">
+    </div>
+  </div>
+
+  <!-- Featured Products -->
+  <section>
+    <div class="section-header reveal">
+      <div>
+        <p class="section-eyebrow">Hand-Picked</p>
+        <h2 class="section-title">Featured <strong>Styles</strong></h2>
+      </div>
+      <a href="#" class="view-all-link">View All →</a>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card reveal" onclick="addToCart('Earth Tone Essential', 899)">
+        <div class="product-img-wrap">
+          <span class="product-badge new">New In</span>
+          <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=400&q=80" alt="Earth Tone Essential">
+          <div class="product-actions">
+            <button class="product-action-btn main"
+              onclick="event.stopPropagation(); addToCart('Earth Tone Essential', 899)">Add to Cart</button>
+            <button class="product-action-btn" onclick="event.stopPropagation()">Quick View</button>
+          </div>
+          <button class="product-wishlist" onclick="event.stopPropagation(); wishlist(this)">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </button>
+        </div>
+        <p class="product-name">Earth Tone Essential</p>
+        <div class="product-price"><span class="price-current">₹899</span></div>
+      </div>
+
+      <div class="product-card reveal" onclick="addToCart('Acid Wash Classic', 1099)">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1618354691551-44de113f0164?w=400&q=80" alt="Acid Wash Classic">
+          <div class="product-actions">
+            <button class="product-action-btn main"
+              onclick="event.stopPropagation(); addToCart('Acid Wash Classic', 1099)">Add to Cart</button>
+            <button class="product-action-btn" onclick="event.stopPropagation()">Quick View</button>
+          </div>
+          <button class="product-wishlist" onclick="event.stopPropagation(); wishlist(this)">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </button>
+        </div>
+        <p class="product-name">Acid Wash Classic</p>
+        <div class="product-price"><span class="price-current">₹1,099</span><span class="price-old">₹1,299</span></div>
+      </div>
+
+      <div class="product-card reveal" onclick="addToCart('Streetwear Essentials', 1349)">
+        <div class="product-img-wrap">
+          <span class="product-badge">20% off</span>
+          <img src="https://images.unsplash.com/photo-1527719327859-c6ce80353573?w=400&q=80"
+            alt="Streetwear Essentials">
+          <div class="product-actions">
+            <button class="product-action-btn main"
+              onclick="event.stopPropagation(); addToCart('Streetwear Essentials', 1349)">Add to Cart</button>
+            <button class="product-action-btn" onclick="event.stopPropagation()">Quick View</button>
+          </div>
+          <button class="product-wishlist" onclick="event.stopPropagation(); wishlist(this)">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </button>
+        </div>
+        <p class="product-name">Streetwear Essentials</p>
+        <div class="product-price"><span class="price-current">₹1,349</span><span class="price-old">₹1,699</span><span
+            class="price-off">20%</span></div>
+      </div>
+
+      <div class="product-card reveal" onclick="addToCart('Graphic Statement Tee', 1599)">
+        <div class="product-img-wrap">
+          <span class="product-badge custom">Custom</span>
+          <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&q=80"
+            alt="Graphic Statement Tee">
+          <div class="product-actions">
+            <button class="product-action-btn main"
+              onclick="event.stopPropagation(); addToCart('Graphic Statement Tee', 1599)">Add to Cart</button>
+            <button class="product-action-btn" onclick="event.stopPropagation()">Quick View</button>
+          </div>
+          <button class="product-wishlist" onclick="event.stopPropagation(); wishlist(this)">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </button>
+        </div>
+        <p class="product-name">Graphic Statement Tee</p>
+        <div class="product-price"><span class="price-current">₹1,599</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section-alt">
+    <div class="section-header reveal">
+      <div>
+        <p class="section-eyebrow">What They Say</p>
+        <h2 class="section-title">Customer <strong>Stories</strong></h2>
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">Ordered custom tees for our college fest — 80 pieces in 6 days! The quality was
+          exceptional and the print didn't fade after washing. Will definitely order again.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <div class="author-name">Arjun Mehta</div>
+            <div class="author-location">Mumbai, Maharashtra</div>
+            <div class="author-verified">✓ Verified Purchase</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">The live customizer is so intuitive. I designed a birthday tee for my bestie and it
+          arrived in Bangalore within 4 days, perfectly printed. Absolutely loved it!</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">P</div>
+          <div>
+            <div class="author-name">Priya Nair</div>
+            <div class="author-location">Bengaluru, Karnataka</div>
+            <div class="author-verified">✓ Verified Purchase</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★☆</div>
+        <p class="testimonial-text">Got 20 custom tees for our startup's brand event. Clothique's bulk pricing is
+          unbeatable and the fabric is genuinely 180 GSM — not the thin stuff other brands sell.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div>
+            <div class="author-name">Rohit Sharma</div>
+            <div class="author-location">Delhi, NCR</div>
+            <div class="author-verified">✓ Verified Purchase</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section>
+    <div class="section-header reveal">
+      <div>
+        <p class="section-eyebrow">Style Guide</p>
+        <h2 class="section-title">From Our <strong>Blog</strong></h2>
+      </div>
+      <a href="#" class="view-all-link">View All →</a>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card reveal">
+        <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&q=80" alt="Style Tips"
+          class="blog-img">
+        <p class="blog-tag">Style Tips</p>
+        <h3 class="blog-title">10 Ways to Style an Oversized Tee This Season</h3>
+        <p class="blog-excerpt">From streetwear to semi-formal, the oversized tee is the most versatile piece in your
+          wardrobe. Here's how to rock every look.</p>
+        <div class="blog-meta">
+          <span>June 12, 2025</span>
+          <span class="blog-meta-dot"></span>
+          <span>5 min read</span>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&q=80" alt="Custom Tees"
+          class="blog-img">
+        <p class="blog-tag">Custom Design</p>
+        <h3 class="blog-title">Why Custom T-Shirts Make the Best Corporate Gifts</h3>
+        <p class="blog-excerpt">Corporate gifting is evolving. Branded apparel builds team identity and leaves a lasting
+          impression — especially with premium print quality.</p>
+        <div class="blog-meta">
+          <span>May 28, 2025</span>
+          <span class="blog-meta-dot"></span>
+          <span>4 min read</span>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <img src="https://images.unsplash.com/photo-1467043237213-65f2da53396f?w=600&q=80" alt="Fabric Guide"
+          class="blog-img">
+        <p class="blog-tag">Fabric Guide</p>
+        <h3 class="blog-title">180 GSM vs 240 GSM: Which T-Shirt Cotton is Right for You?</h3>
+        <p class="blog-excerpt">Not all cotton is created equal. We break down the weight, feel, and print performance
+          of different fabric grades so you choose wisely.</p>
+        <div class="blog-meta">
+          <span>May 10, 2025</span>
+          <span class="blog-meta-dot"></span>
+          <span>6 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">Clot<em>hique</em></a>
+        <p class="footer-tagline">Premium custom-printed t-shirts delivered across India. From your imagination to your
+          doorstep.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="#" title="Instagram">IG</a>
+          <a class="social-btn" href="#" title="Facebook">FB</a>
+          <a class="social-btn" href="#" title="Twitter">TW</a>
+          <a class="social-btn" href="#" title="YouTube">YT</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Clothique</h5>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Affiliate Programme</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="#">Offers</a></li>
+          <li><a href="#">Discount Coupons</a></li>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Customer Service</h5>
+        <ul class="footer-links">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Delivery Info</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Subscribe Us</h5>
+        <p>Subscribe to our newsletter to get updates about our good offers.</p>
+        <div class="newsletter-input-wrap">
+          <input type="email" class="newsletter-input" placeholder="Your email">
+          <button class="newsletter-btn">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+        <p
+          style="margin-top:16px; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:rgba(255,255,255,0.3)">
+          📍 Serving 28,000+ Pincodes Across India</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Clothique. All rights reserved. Made with ❤️ in India.</span>
+      <div class="footer-payment">
+        <span>Accepted Payments:</span>
+        <span class="pay-badge">UPI</span>
+        <span class="pay-badge">VISA</span>
+        <span class="pay-badge">MC</span>
+        <span class="pay-badge">AMEX</span>
+        <span class="pay-badge">EMI</span>
+        <span class="pay-badge">COD</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Cart Button -->
+  <div class="floating-cart">
+    <button class="fab fab-cart" onclick="openCart()" title="View Cart">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <path d="M16 10a4 4 0 0 1-8 0" />
+      </svg>
+      <span class="fab-badge" id="fabBadge">0</span>
+    </button>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">Item added to cart!</div>
+
+  <!-- Cart Panel -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-panel-header">
+      <h3>Your Cart</h3>
+      <button class="close-btn" onclick="closeCart()">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p
+        style="text-align:center; color:var(--mid-gray); margin-top:60px; font-family:var(--font-display); font-size:18px; font-style:italic">
+        Your cart is empty.<br><span style="font-size:14px; font-style:normal; font-family:var(--font-body)">Start
+          shopping to add items!</span></p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span class="cart-total-val" id="cartTotal">₹0</span>
+      </div>
+      <button class="checkout-btn">Proceed to Checkout →</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
